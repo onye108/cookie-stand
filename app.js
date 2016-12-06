@@ -29,9 +29,7 @@ firstAndPike.customerVisit();
 firstAndPike.cookiesSold();
 
 var total = 0;
-
 var fnpList = document.getElementById('firstAndPike');
-console.log(fnpList);
 for(var i = 0; i < hoursOpen.length; i++) {
   var liEl = document.createElement('li');
   var theHour = hoursOpen[i];
@@ -49,3 +47,145 @@ for(var i = 0; i < hoursOpen.length; i++) {
 var tot = document.createElement('li');
 tot.textContent = 'Total : ' + total;
 fnpList.appendChild(tot);
+
+var seaTacAP = {
+  minCust:3,
+  maxCust:24,
+  avgCookieSale:1.2,
+  cookiesPhour :[],
+  custPhour: [],
+
+  customerVisit: function (){
+    for(var i = 0; i < hoursOpen.length; i++){
+      var customers = Math.floor( Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust;
+      this.custPhour.push(customers);
+    }
+  },
+
+  cookiesSold: function(){
+    for(var i = 0; i < hoursOpen.length; i++){
+      var result = (this.custPhour[i] * this.avgCookieSale);
+      this.cookiesPhour.push(Math.round(result));
+
+    }
+  }
+
+};
+
+seaTacAP.customerVisit();
+seaTacAP.cookiesSold();
+
+var total1 = 0;
+var seaTacList = document.getElementById('SeaTacAirport');
+for(var i = 0; i < hoursOpen.length; i++) {
+  var liEl1 = document.createElement('li');
+  var theHour1 = hoursOpen[i];
+  var soldCookies1 = seaTacAP.cookiesPhour[i];
+  total1 += soldCookies1;
+
+
+  var message1 = theHour1 + ' : ' + soldCookies1;
+
+
+  liEl1.textContent = message1;
+  seaTacList.appendChild(liEl1);
+
+}
+var tot1 = document.createElement('li');
+tot1.textContent = 'Total : ' + total1;
+seaTacList.appendChild(tot1);
+
+
+var seaCenter = {
+  minCust:11,
+  maxCust:38,
+  avgCookieSale:3.7,
+  cookiesPhour :[],
+  custPhour: [],
+
+  customerVisit: function (){
+    for(var i = 0; i < hoursOpen.length; i++){
+      var customers = Math.floor( Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust;
+      this.custPhour.push(customers);
+    }
+  },
+
+  cookiesSold: function(){
+    for(var i = 0; i < hoursOpen.length; i++){
+      var result = (this.custPhour[i] * this.avgCookieSale);
+      this.cookiesPhour.push(Math.round(result));
+
+    }
+  }
+
+};
+
+seaCenter.customerVisit();
+seaCenter.cookiesSold();
+
+var total2 = 0;
+var seaCenList = document.getElementById('seaCenter');
+for(var i = 0; i < hoursOpen.length; i++) {
+  var liEl2 = document.createElement('li');
+  var theHour2 = hoursOpen[i];
+  var soldCookies2 = seaCenter.cookiesPhour[i];
+  total2 += soldCookies2;
+
+
+  var message2 = theHour2 + ' : ' + soldCookies2;
+
+
+  liEl2.textContent = message2;
+  seaCenList.appendChild(liEl2);
+
+}
+var tot2 = document.createElement('li');
+tot2.textContent = 'Total : ' + total2;
+seaCenList.appendChild(tot2);
+
+var capitolHill = {
+  minCust:20,
+  maxCust:38,
+  avgCookieSale:2.3,
+  cookiesPhour :[],
+  custPhour: [],
+
+  customerVisit: function (){
+    for(var i = 0; i < hoursOpen.length; i++){
+      var customers = Math.floor( Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust;
+      this.custPhour.push(customers);
+    }
+  },
+
+  cookiesSold: function(){
+    for(var i = 0; i < hoursOpen.length; i++){
+      var result = (this.custPhour[i] * this.avgCookieSale);
+      this.cookiesPhour.push(Math.round(result));
+
+    }
+  }
+
+};
+
+capitolHill.customerVisit();
+capitolHill.cookiesSold();
+
+var total3 = 0;
+var capHilList = document.getElementById('capitolHill');
+for(var i = 0; i < hoursOpen.length; i++) {
+  var liEl3 = document.createElement('li');
+  var theHour3 = hoursOpen[i];
+  var soldCookies3 = capitolHill.cookiesPhour[i];
+  total3 += soldCookies3;
+
+
+  var message3 = theHour3 + ' : ' + soldCookies3;
+
+
+  liEl3.textContent = message3;
+  capHilList.appendChild(liEl3);
+
+}
+var tot3 = document.createElement('li');
+tot3.textContent = 'Total : ' + total3;
+capHilList.appendChild(tot3);
