@@ -27,3 +27,25 @@ var firstAndPike = {
 
 firstAndPike.customerVisit();
 firstAndPike.cookiesSold();
+
+var total = 0;
+
+var fnpList = document.getElementById('firstAndPike');
+console.log(fnpList);
+for(var i = 0; i < hoursOpen.length; i++) {
+  var liEl = document.createElement('li');
+  var theHour = hoursOpen[i];
+  var soldCookies = firstAndPike.cookiesPhour[i];
+  total += soldCookies;
+
+
+  var message = theHour + ' : ' + soldCookies;
+
+
+  liEl.textContent = message;
+  fnpList.appendChild(liEl);
+
+}
+var tot = document.createElement('li');
+tot.textContent = 'Total : ' + total;
+fnpList.appendChild(tot);
