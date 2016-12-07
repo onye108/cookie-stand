@@ -267,5 +267,5 @@ var myStores = [];
 new Store ('Alki', 2, 26, 2.6);
 new Store ('Capitol Hill', 20, 38, 2.3);
 new Store ('Sea Center', 11, 38, 3.7);
-new Store ('Sea Tac AP', 3, 24, 1.2);
+new Store ('Seattle Tacoma AP', 3, 24, 1.2);
 new Store ('First and Pike', 23, 65, 6.3);
