@@ -189,3 +189,83 @@ for(var i = 0; i < hoursOpen.length; i++) {
 var tot3 = document.createElement('li');
 tot3.textContent = 'Total : ' + total3;
 capHilList.appendChild(tot3);
+
+
+var alkiStore = {
+  minCust:2,
+  maxCust:16,
+  avgCookieSale:4.6,
+  cookiesPhour :[],
+  custPhour: [],
+
+  customerVisit: function (){
+    for(var i = 0; i < hoursOpen.length; i++){
+      var customers = Math.floor( Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust;
+      this.custPhour.push(customers);
+    }
+  },
+
+  cookiesSold: function(){
+    for(var i = 0; i < hoursOpen.length; i++){
+      var result = (this.custPhour[i] * this.avgCookieSale);
+      this.cookiesPhour.push(Math.round(result));
+
+    }
+  }
+
+};
+
+alkiStore.customerVisit();
+alkiStore.cookiesSold();
+
+var total4 = 0;
+var alkiList = document.getElementById('Alki Location');
+for(var i = 0; i < hoursOpen.length; i++) {
+  var liEl4 = document.createElement('li');
+  var theHour4 = hoursOpen[i];
+  var soldCookies4 = alkiStore.cookiesPhour[i];
+  total4 += soldCookies4;
+
+
+  var message4 = theHour4 + ' : ' + soldCookies4;
+
+
+  liEl4.textContent = message4;
+  alkiList.appendChild(liEl4);
+
+}
+var tot4 = document.createElement('li');
+tot4.textContent = 'Total : ' + total4;
+alkiList.appendChild(tot4);
+
+
+function Store (name, minCust, maxCust, avgSales){
+  this.name = name;
+  this.minCust = minCust;
+  this.maxCust = maxCust;
+  this.avgCookieSale = avgSales;
+  this.cookiesPhour = [];
+  this.custPhour = [];
+
+  this.customerVisit = function (){
+    for(var i = 0; i < hoursOpen.length; i++){
+      var customers = Math.floor( Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust;
+      this.custPhour.push(customers);
+    }
+  };
+
+  this.cookiesSold = function (){
+    for(var i = 0; i < hoursOpen.length; i++){
+      var result = (this.custPhour[i] * this.avgCookieSale);
+      this.cookiesPhour.push(Math.round(result));
+
+    }
+  };
+  myStores.push(this);
+}
+var myStores = [];
+new Store ('Alki', 2, 26, 2.6);
+new Store ('Capitol Hill', 20, 38, 2.3);
+new Store ('Sea Center', 11, 38, 3.7);
+new Store ('Sea Tac AP', 3, 24, 1.2);
+new Store ('First and Pike', 23, 65, 6.3);
