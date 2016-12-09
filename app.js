@@ -1,0 +1,91 @@
+'use strict';
+
+var hoursOpen = ['6am','7am','8am','9am', '10am', '11am', '12pm','1pm', '2pm','3pm','4pm','5pm','6pm','7pm'];
+
+var myStores = [];
+var table = document.getElementById('table');
+
+
+function Stores (name, minCust, maxCust, avgCookieSales){
+  this.name = name;
+  this.minCust = minCust;
+  this.maxCust = maxCust;
+  this.avgCookieSale = avgCookieSales;
+  this.cookiesSold = [];
+  this.randomNumArray = [];
+  this.totalCookieSales = 0;
+
+  this.calcRandomNumber = function (){
+    for(var i = 0; i < hoursOpen.length; i++){
+      this.randomNumArray.push(Math.floor( Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust);
+    }
+  };
+  this.calcRandomNumber();
+
+  this.calcCookieSales = function (){
+    this.calcRandomNumber();
+    for(var i = 0; i < hoursOpen.length; i++){
+      this.cookiesSold.push(Math.ceil(this.randomNumArray[i] * this.avgCookieSale));
+      this.totalCookieSales += this.cookiesSold[i];
+
+    }
+  };
+  this.calcCookieSales();
+
+  this.render = function (){
+    this.calcCookieSales();
+      var storesTr = document.createElement('tr');
+
+      var storeList = document.createElement('tr');
+      storeList.textContent = name;
+      storesTr.appendChild(storeList);
+      table.appendChild(storesTr);
+//***************writing data in cells***************************
+    for(var i = 0; i < hoursOpen.length; i++){
+
+      var hourlyDataCells = document.createElement('td');
+      hourlyDataCells.textContent = this.cookiesSold[i];
+      storesTr.appendChild(hourlyDataCells);
+    }
+    //Store names left side of table***************************
+    var lastColumnTotals = document.createElement('tr');
+    lastColumnTotals.textContent = this.totalCookieSales;
+    storesTr.appendChild(lastColumnTotals);
+
+  };
+  this.render();
+  myStores.push(this);
+}; //*******************END OF Constructor*********************************
+makeHeaderRows();
+
+console.log(this.randomNumArray);
+console.log(myStores);
+new Stores ('Alki', 2, 26, 2.6);
+new Stores ('Capitol Hill', 20, 38, 2.3);
+new Stores ('Sea Center', 11, 38, 3.7);
+new Stores ('SeaTacAP', 3, 24, 1.2);
+new Stores ('First and Pike', 23, 65, 6.3);
+
+function makeHeaderRows() {
+
+  var elementRow = document.createElement('tr');
+
+  var headerCell = document.createElement('th');
+  headerCell.textContent = 'Locations';
+  table.appendChild(headerCell);
+
+  for (var i = 0; i < hoursOpen.length; i++ ) {
+
+    var thElement = document.createElement('th');
+    thElement.textContent = hoursOpen[i];
+    table.appendChild(thElement);
+
+  }
+  var totalRow = document.createElement('th');
+  totalRow.textContent = 'Totals';
+  table.appendChild(totalRow);
+
+  var storeList = document.createElement('tr');
+  storeList.textContent = name;
+  table.appendChild(storeList);
+};
