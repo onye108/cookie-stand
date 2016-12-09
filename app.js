@@ -18,9 +18,9 @@ function Stores (name, minCust, maxCust, avgCookieSales){
   this.calcRandomNumber = function (){
     for(var i = 0; i < hoursOpen.length; i++){
       this.randomNumArray.push(Math.floor( Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust);
+
     }
   };
-  this.calcRandomNumber();
 
   this.calcCookieSales = function (){
     this.calcRandomNumber();
@@ -33,13 +33,13 @@ function Stores (name, minCust, maxCust, avgCookieSales){
   this.calcCookieSales();
 
   this.render = function (){
-    this.calcCookieSales();
-      var storesTr = document.createElement('tr');
 
-      var storeList = document.createElement('tr');
-      storeList.textContent = name;
-      storesTr.appendChild(storeList);
-      table.appendChild(storesTr);
+    var storesTr = document.createElement('tr');
+
+    var storeList = document.createElement('tr');
+    storeList.textContent = name;
+    storesTr.appendChild(storeList);
+    table.appendChild(storesTr);
 //***************writing data in cells***************************
     for(var i = 0; i < hoursOpen.length; i++){
 
@@ -56,7 +56,7 @@ function Stores (name, minCust, maxCust, avgCookieSales){
   this.render();
   myStores.push(this);
 }; //*******************END OF Constructor*********************************
-makeHeaderRows();
+
 
 console.log(this.randomNumArray);
 console.log(myStores);
@@ -89,3 +89,25 @@ function makeHeaderRows() {
   storeList.textContent = name;
   table.appendChild(storeList);
 };
+//****************Start Data Form **********************
+var formData = document.getElementById('userinput');
+
+formData.addEventListener('submit', inputNewUserData);
+
+function inputNewUserData (event) {
+  event.preventDefault();
+
+
+var valueForName = event.target.elements.name.value;
+var valueForMinCust = event.target.elements.minCust.value;
+var valueForMaxCust = event.target.elements.maxCust.value;
+var valueForavgCookieSales = event.target.elements.avgCookieSales.value;
+console.log(valueForName);
+var newLocation = new Stores (valueForName,valueForMinCust, valueForMaxCust, valueForavgCookieSales );
+table.innerHTML= '';
+makeHeaderRows();
+
+for (var i = 0; i < myStores.length; i++) {
+  myStores[i].render();
+}
+};//***************end of inputNewUserData ******************
