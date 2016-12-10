@@ -18,9 +18,9 @@ function Stores (name, minCust, maxCust, avgCookieSales){
   this.calcRandomNumber = function (){
     for(var i = 0; i < hoursOpen.length; i++){
       this.randomNumArray.push(Math.floor( Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust);
+
     }
   };
-  this.calcRandomNumber();
 
   this.calcCookieSales = function (){
     this.calcRandomNumber();
@@ -30,16 +30,18 @@ function Stores (name, minCust, maxCust, avgCookieSales){
 
     }
   };
+
   this.calcCookieSales();
 
   this.render = function (){
-    this.calcCookieSales();
-      var storesTr = document.createElement('tr');
 
-      var storeList = document.createElement('tr');
-      storeList.textContent = name;
-      storesTr.appendChild(storeList);
-      table.appendChild(storesTr);
+    var storesTr = document.createElement('tr');
+
+    var storeList = document.createElement('tr');
+    storeList.textContent = name;
+    storesTr.appendChild(storeList);
+    table.appendChild(storesTr);
+
 //***************writing data in cells***************************
     for(var i = 0; i < hoursOpen.length; i++){
 
@@ -55,16 +57,18 @@ function Stores (name, minCust, maxCust, avgCookieSales){
   };
   this.render();
   myStores.push(this);
+
 }; //*******************END OF Constructor*********************************
+
 makeHeaderRows();
 
 console.log(this.randomNumArray);
 console.log(myStores);
 new Stores ('Alki', 2, 26, 2.6);
-new Stores ('Capitol Hill', 20, 38, 2.3);
-new Stores ('Sea Center', 11, 38, 3.7);
+new Stores ('CapHill', 20, 38, 2.3);
+new Stores ('SeaCenter', 11, 38, 3.7);
 new Stores ('SeaTacAP', 3, 24, 1.2);
-new Stores ('First and Pike', 23, 65, 6.3);
+new Stores ('FirstandPike', 23, 65, 6.3);
 
 function makeHeaderRows() {
 
@@ -89,3 +93,46 @@ function makeHeaderRows() {
   storeList.textContent = name;
   table.appendChild(storeList);
 };
+//*******************start footer****************************
+// function makeTotalrow() {
+//   var cookieStands = Stores[i].cookiesSold[k];
+//
+//   for (var i = 0; i < hoursOpen.length; i++) {
+//
+//     var totalCookies = 0;
+//   }
+//
+//   for (var j = 0; j < Stores[j].length; j++) {
+//
+//
+//       totalCookies += Stores[j].cookiesSold[i];
+//
+// }
+//
+//
+// };
+// //********************end footer******************************
+// //****************Start Data Form **********************
+var formData = document.getElementById('userinput');
+
+formData.addEventListener('submit', inputNewUserData);
+
+function inputNewUserData (event) {
+  event.preventDefault();
+
+//***********************form data regenrator***************************
+  var valueForName = event.target.elements.name.value;
+  var valueForMinCust = event.target.elements.minCust.value;
+  var valueForMaxCust = event.target.elements.maxCust.value;
+  var valueForavgCookieSales = event.target.elements.avgCookieSales.value;
+  console.log(valueForName);
+  var newLocation = new Stores (valueForName,valueForMinCust, valueForMaxCust, valueForavgCookieSales );
+  table.innerHTML = '';
+
+  // makeHeaderRows();
+
+
+  for (var i = 0; i < myStores.length; i++) {
+    myStores[i].render();
+  }
+};//***************end of inputNewUserData ******************
