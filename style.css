@@ -1,11 +1,45 @@
-/*th {
-  border: 1px solid red;
+th {
+  border: 1px solid #092F19;
 }
 
 td {
   border: 1px solid orange;
+  background-color: #E2DFD5;
+  color: black;
+
 }
 
 tr {
   border: 1px solid blue;
-}*/
+}
+h1{
+  font-family: 'Indie Flower', cursive;
+}
+body {
+    background-color: #E2D6B5;
+    opacity: 0.7;
+    background-image: url("salmon");
+}
+
+body{
+
+    /*opacity: 1.0;*/
+    background-attachment: fixed;
+    padding-bottom: 10px;
+    background-repeat: no-repeat;
+    background-position:center;
+    border-bottom: 20 px;
+  }
+  table{
+    font-family: 'Indie Flower', cursive;
+    position: relative;
+}
+
+  #userinput{
+    font-family: 'Indie Flower', cursive;
+    position: bottom;
+
+  }
+#legend{ padding-bottom: 0px;
+
+}
