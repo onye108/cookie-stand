@@ -61,7 +61,7 @@ function Stores (name, minCust, maxCust, avgCookieSales){
 }; //*******************END OF Constructor*********************************
 
 makeHeaderRows();
-
+makeFooterRow ();
 console.log(this.randomNumArray);
 console.log(myStores);
 new Stores ('Alki', 2, 26, 2.6);
@@ -93,25 +93,20 @@ function makeHeaderRows() {
   table.appendChild(storeList);
 };
 
-//*******************start footer****************************
-// function makeTotalrow() {
-//   var cookieStands = Stores[i].cookiesSold[k];
+
 //
-//   for (var i = 0; i < hoursOpen.length; i++) {
+//   for (var i = 0; i < myStores.length; i++) {
+//     var hourlyTotalAllLocations = 0;
+//     for (var k = 0; k < hoursOpen.length; k++) {
 //
-//     var totalCookies = 0;
+//       hourlyTotalAllLocations += myStores[i][k];
+//       var totalCookiesSoldEachHour = document.createElement('td');
+//       totalCookiesSoldEachHour.textContent = hourlyTotalAllLocations;
+//       storeTr.appendChild(totalCookiesSoldEachHour);
+//
+//     }
 //   }
-//
-//   for (var j = 0; j < Stores[j].length; j++) {
-//
-//
-//       totalCookies += Stores[j].cookiesSold[i];
-//
-// }
-//
-//
 // };
-// //********************end footer******************************
 // //****************Start Data Form **********************
 var formData = document.getElementById('userinput');
 
@@ -129,10 +124,11 @@ function inputNewUserData (event) {
   var newLocation = new Stores (valueForName,valueForMinCust, valueForMaxCust, valueForavgCookieSales );
   table.innerHTML = '';
 
-  // makeHeaderRows();
+
 
 
   for (var i = 0; i < myStores.length; i++) {
     myStores[i].render();
   }
 };//***************end of inputNewUserData ******************
+//*******************Validations********************************
