@@ -71,7 +71,6 @@ new Stores ('SeaTacAP', 3, 24, 1.2);
 new Stores ('FirstandPike', 23, 65, 6.3);
 
 function makeHeaderRows() {
-
   var elementRow = document.createElement('tr');
 
   var headerCell = document.createElement('th');
@@ -93,6 +92,7 @@ function makeHeaderRows() {
   storeList.textContent = name;
   table.appendChild(storeList);
 };
+
 //*******************start footer****************************
 // function makeTotalrow() {
 //   var cookieStands = Stores[i].cookiesSold[k];

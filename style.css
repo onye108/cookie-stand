@@ -1,45 +1,63 @@
+
 th {
   border: 1px solid #092F19;
+  text-decoration: none;
+  background-color: #4B5135;
+  color: #E2D6B5;
 }
 
 td {
   border: 1px solid orange;
   background-color: #E2DFD5;
   color: black;
-
+text-decoration: none;
 }
 
 tr {
-  border: 1px solid blue;
+  background-color: #4B5135;
+  color: #E2D6B5;
+  border: 2px solid #092F19;
+  opacity: 1.0;
 }
 h1{
   font-family: 'Indie Flower', cursive;
+  text-decoration: none;
 }
 body {
     background-color: #E2D6B5;
     opacity: 0.7;
     background-image: url("salmon");
+    text-decoration: none;
 }
 
 body{
 
-    /*opacity: 1.0;*/
-    background-attachment: fixed;
     padding-bottom: 10px;
     background-repeat: no-repeat;
     background-position:center;
     border-bottom: 20 px;
+    text-decoration: none;
   }
-  table{
+table {
     font-family: 'Indie Flower', cursive;
     position: relative;
+    text-decoration: none;
 }
 
   #userinput{
     font-family: 'Indie Flower', cursive;
-    position: bottom;
-
-  }
-#legend{ padding-bottom: 0px;
-
+    position: center bottom;
+    padding-bottom: 10px;
+    text-decoration: none;
 }
+
+ul{margin:0px; padding: 0px; opacity: 1.0;}
+
+ul li a{
+text-decoration: none;
+color:#E2D6B5;
+display: block;
+}
+ul li{  float: left; width: 200px; height: 25px; background-color: #4B5135; font-family:'Indie Flower', cursive; font-size: 15px; line-height: 50px;  text-align: center; opacity: 0.65; padding-bottom: 25px; padding-right: 0px; border: 1px orange solid; }
+
+ul li a:hover{ background-color: orange;}
