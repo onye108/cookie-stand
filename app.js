@@ -71,7 +71,6 @@ new Stores ('SeaTacAP', 3, 24, 1.2);
 new Stores ('FirstandPike', 23, 65, 6.3);
 
 function makeHeaderRows() {
-
   var elementRow = document.createElement('tr');
 
   var headerCell = document.createElement('th');
@@ -94,9 +93,7 @@ function makeHeaderRows() {
   table.appendChild(storeList);
 };
 
-///*****************************footer row*********************************
-// function makeFooterRow (){
-//   var totalofTotals = 0;
+
 //
 //   for (var i = 0; i < myStores.length; i++) {
 //     var hourlyTotalAllLocations = 0;
