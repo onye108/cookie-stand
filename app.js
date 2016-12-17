@@ -93,26 +93,6 @@ function makeHeaderRows() {
   table.appendChild(storeList);
 };
 
-//*******************start footer****************************
-// function makeTotalrow() {
-//   var cookieStands = Stores[i].cookiesSold[k];
-//
-//   for (var i = 0; i < hoursOpen.length; i++) {
-//
-//     var totalCookies = 0;
-//   }
-//
-//   for (var j = 0; j < Stores[j].length; j++) {
-//
-//
-//       totalCookies += Stores[j].cookiesSold[i];
-//
-// }
-//
-//
-// };
-// //********************end footer******************************
-// //****************Start Data Form **********************
 var formData = document.getElementById('userinput');
 
 formData.addEventListener('submit', inputNewUserData);
