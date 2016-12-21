@@ -1,5 +1,72 @@
+html body{
+  padding-top: 30px;
+  padding-bottom: 30px;
+  max-height:100%;
+  max-width:100%;
+  background-color: black;
+  color: white;
+}
 
+main{
+  max-width: 960px;
+  padding-left: 190px;
+  padding-top: 30px;
 
+}
+.pic2{
+  padding-left: 0px;
+}
+main ul{
+  position: absolute;
+  padding-top: 30px;
+  width: 100%;
+}
+main ul li{
+  display: inline;
+  padding-left: 160px;
+  max-width: 960px;
+}
+.fitdamnit li:last-child{
+  clear: both;
+}
+ section{
+  padding-top: 435px;
+  max-width: 960px;
+}
+section img {
+  float: left;
+  width: 50%;
+}
+article{
+  width: 50%;
+  float: right;
+  padding-bottom:30px;
+}
+article h2{
+  font-size: 36px;
+  padding-left: 30px;
+}
+article p{
+  height: 260px;
+  width: 95%;
+  overflow: auto;
+  font-size: 18px;
+  font-style: italic;
+  line-height: 24px;
+  padding-left: 30px;
+}
+.homeButton{
+  align-items: center;
+}
+ .footer{
+  position: relative;
+  clear: both;
+  margin-top: 30px;
+  height: 70px;
+  width: 100%;
+  background-color: grey;
+}
+/*
 img{opacity: 1.0; }
 p{
   text-align: center;
@@ -59,37 +126,4 @@ display: block;
 }
 .banner li{  float: left; width: 200px; height: 25px; background-color: #204C84; font-family:'Indie Flower', cursive; font-size: 15px; line-height: 50px;  text-align: center; opacity: 0.65; padding-bottom: 25px; padding-right: 0px; }
 
-.banner li a:hover{ background-color: orange;}
-/*.enjoy-css {
-
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  width: 960%;
-  height: 13%;
-  margin: 20px 0;
-  padding: 5px;
-  overflow: hidden;
-  border: none;
-  font: 54px 'Indie Flower', cursive;
-  color: #F7C230;
-
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  word-spacing: 2px;
-  background: -webkit-linear-gradient(-90deg, rgba(249,184,4,0.27) 0, rgba(249,184,4,0.27) 25%, rgba(14,90,255,1) 100%), rgb(32, 76, 132);
-  background: -moz-linear-gradient(180deg, rgba(249,184,4,0.27) 0, rgba(249,184,4,0.27) 25%, rgba(14,90,255,1) 100%), rgb(32, 76, 132);
-  background: linear-gradient(180deg, rgba(249,184,4,0.27) 0, rgba(249,184,4,0.27) 25%, rgba(14,90,255,1) 100%), rgb(32, 76, 132);
-  background-position: 44% 50%;
-  -webkit-background-origin: padding-box;
-  background-origin: padding-box;
-  -webkit-background-clip: border-box;
-  background-clip: border-box;
-  -webkit-background-size: cover;
-  background-size: cover;
-  -webkit-transition: text-shadow 200ms cubic-bezier(0.895, 0.03, 0.685, 0.22) 10ms;
-  -moz-transition: text-shadow 200ms cubic-bezier(0.895, 0.03, 0.685, 0.22) 10ms;
-  -o-transition: text-shadow 200ms cubic-bezier(0.895, 0.03, 0.685, 0.22) 10ms;
-  transition: text-shadow 200ms cubic-bezier(0.895, 0.03, 0.685, 0.22) 10ms;
-}*/
+.banner li a:hover{ background-color: orange;}*/
