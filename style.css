@@ -1,4 +1,16 @@
 
+header{
+    word-spacing: -1px;
+    text-shadow: 5px 5px 0 rgba(22,120,23,1);
+    font-size: 30px;
+    color: orangered;
+  }
+.banner{
+  margin-top: 10px;
+  padding-bottom: 110px;
+
+
+}
 th {
   border: 1px solid #092F19;
   text-decoration: none;
