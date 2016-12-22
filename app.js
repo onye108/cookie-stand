@@ -61,7 +61,8 @@ function Stores (name, minCust, maxCust, avgCookieSales){
 }; //*******************END OF Constructor*********************************
 
 makeHeaderRows();
-makeFooterRow ();
+
+
 console.log(this.randomNumArray);
 console.log(myStores);
 new Stores ('Alki', 2, 26, 2.6);
@@ -92,26 +93,42 @@ function makeHeaderRows() {
   storeList.textContent = name;
   table.appendChild(storeList);
 };
+function footerRows () {
+
+  var trEl = document.createElement('tr');
+  var tdEl = document.createElement('td');
+  tdEl.textContent = ('Store Sales');
+  trEl.appendChild(tdEl);
+
+  for(var i = 0; i < hoursOpen.length; i++){
+    var t = 0;
+
+    for (var j = 0; j < myStores.length; j++){
+      t += myStores[j].cookiesSold[i];
+    }
+    var tdEl1 = document.createElement('td');
+    tdEl1.textContent = t;
+    trEl.appendChild(tdEl1);
+  }
+  var endTotal = 0;
+  for(var i = 0; i < myStores.length; i++){
+    endTotal += myStores[i].totalCookieSales;
+  }
+  tdEl = document.createElement('td');
+  tdEl.textContent = endTotal;
+  trEl.appendChild(tdEl);
+  table.appendChild(trEl);
+}
 
 
-//
-//   for (var i = 0; i < myStores.length; i++) {
-//     var hourlyTotalAllLocations = 0;
-//     for (var k = 0; k < hoursOpen.length; k++) {
-//
-//       hourlyTotalAllLocations += myStores[i][k];
-//       var totalCookiesSoldEachHour = document.createElement('td');
-//       totalCookiesSoldEachHour.textContent = hourlyTotalAllLocations;
-//       storeTr.appendChild(totalCookiesSoldEachHour);
-//
-//     }
-//   }
-// };
-// //****************Start Data Form **********************
+
+
+
+
 var formData = document.getElementById('userinput');
 
 formData.addEventListener('submit', inputNewUserData);
-
+footerRows();
 function inputNewUserData (event) {
   event.preventDefault();
 
