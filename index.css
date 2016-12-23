@@ -1,0 +1,112 @@
+
+h1{
+
+    font-family: 'Indie Flower', cursive;
+    word-spacing: -1px;
+    text-shadow: 5px 5px 0 oldlace;
+    font-size: 99px;
+    color: cornflowerblue;
+    display: inline;
+    text-align: center;
+}
+
+html body{
+ padding-top: 30px;
+ padding-bottom: 30px;
+ max-height:100%;
+ max-width:100%;
+ background-color: khaki;
+ color: white;
+}
+header{
+ position: relative;
+ width: 100%;
+ background-color: ;
+ color: lightgrey;
+}
+nav{
+ padding-left: 150px;
+ background-color: lightgrey;
+ color: cornflowerblue;
+}
+.pic1{
+ padding-left: 0;
+}
+nav ul{
+width: 100%;
+top: 0;
+display: inline;
+}
+nav li{
+ display: inline;
+ padding: 30px;
+ max-width: 960px;
+ text-align: center;
+}
+ main{
+   max-width: 960px;
+   padding-left: 150px;
+   padding-top: 30px;
+ }
+ .pic2{
+   padding-left: 0px;
+ }
+ main ul{
+   position: absolute;
+   padding-top: 30px;
+   width: 100%;
+ }
+ main ul li{
+   display: inline;
+   padding-left: 30px;
+   max-width: 960px;
+ }
+ .threeBlock li:last-child{
+   clear: both;
+ }
+  section{
+   padding-top: 435px;
+   max-width: 960px;
+ }
+ section img {
+   float: left;
+   width: 50%;
+ }
+ article{
+   width: 50%;
+   float: right;
+   padding-bottom:30px;
+ }
+ article h2{
+
+     font-size: 36px;
+     padding-left: 30px;
+   }
+   article p{
+     height: 260px;
+     width: 95%;
+     overflow: auto;
+     font-size: 18px;
+     font-style: italic;
+     line-height: 24px;
+     padding-left: 30px;
+   }
+   div button{
+     height: 75px;
+     width: 75%;
+     margin-bottom: 0;
+     margin-top: 30px;
+     margin-left: 30px;
+     border-radius: 5px;
+   }
+   button:hover{
+   background-color: red;
+   }
+    .footer{
+     position: relative;
+     clear: both;
+     margin-top: 30px;
+     height: 70px;
+     width: 100%;
+     background-color: grey;
+   }

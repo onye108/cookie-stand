@@ -5,6 +5,10 @@ html body{
   max-width:100%;
   background-color: black;
   color: white;
+  background-color: rgba(39, 157, 176, 0.52);
+color: white;
+word-spacing: 3px;
+}
 }
 
 main{
@@ -66,64 +70,3 @@ article p{
   width: 100%;
   background-color: grey;
 }
-/*
-img{opacity: 1.0; }
-p{
-  text-align: center;
-  font-family:'Indie Flower', cursive;
-}
-.contactList ul li a{text-align: center;}
-.contactbody{background-color: #204C84;
-  font-family: 'Indie Flower', cursive;
-
-}
-.board-game {
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  border: none;
-  font: normal 84px/normal "Comic Sans MS", cursive, sans-serif;
-  color: rgba(121,151,242,1);
-  text-align: center;
-  -o-text-overflow: clip;
-  text-overflow: clip;
-  text-shadow: 5px 5px 0 rgba(239,172,64,1) , 10px 10px 0 rgba(29,123,170,1) , 15px 14px 0 rgb(255,210,23) , 20px 20px 0 rgb(90,199,255) ;
-}
-
-h1,h2{
-font-family:'Indie Flower', cursive;
-text-align: center;
-}
-body > article
-{
-width: 760px;
-margin: 0 auto;
-}
-
-article {
-  outline: 1px solid #204C84;
-  background-color: #204C84;
-
-overflow: hidden;
-width: 960%;
-margin: 20px 0;
-padding: 5px; }
-
-aside {
-width: 150px;
-float: left; }
-
-section {
-float: right;
-width: 590px; }
-
-.banner{margin:0px; padding: 0px; opacity: 1.0;}
-
-.banner li a{
-text-decoration: none;
-color:#E2D6B5;
-display: block;
-}
-.banner li{  float: left; width: 200px; height: 25px; background-color: #204C84; font-family:'Indie Flower', cursive; font-size: 15px; line-height: 50px;  text-align: center; opacity: 0.65; padding-bottom: 25px; padding-right: 0px; }
-
-.banner li a:hover{ background-color: orange;}*/
