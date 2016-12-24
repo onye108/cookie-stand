@@ -28,6 +28,9 @@ nav{
  padding-left: 150px;
  background-color: lightgrey;
  color: cornflowerblue;
+ font-family: 'Indie Flower', cursive;
+ text-decoration: none;
+}
 }
 .pic1{
  padding-left: 0;

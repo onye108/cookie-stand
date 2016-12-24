@@ -17,6 +17,27 @@ main{
   padding-top: 30px;
 
 }
+nav{
+ padding-left: 150px;
+ background-color: lightgrey;
+ color: cornflowerblue;
+ font-family: 'Indie Flower', cursive;
+ text-decoration: none;
+}
+.pic1{
+ padding-left: 0;
+}
+nav ul{
+width: 100%;
+top: 0;
+display: inline;
+}
+nav li{
+ display: inline;
+ padding: 30px;
+ max-width: 960px;
+ text-align: center;
+}
 .pic2{
   padding-left: 0px;
 }
