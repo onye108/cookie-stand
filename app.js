@@ -60,8 +60,8 @@ function Stores (name, minCust, maxCust, avgCookieSales){
 
 }; //*******************END OF Constructor*********************************
 
-makeHeaderRows();
 
+makeHeaderRows();
 
 console.log(this.randomNumArray);
 console.log(myStores);
@@ -93,6 +93,7 @@ function makeHeaderRows() {
   storeList.textContent = name;
   table.appendChild(storeList);
 };
+
 function footerRows () {
 
   var trEl = document.createElement('tr');
@@ -111,14 +112,16 @@ function footerRows () {
     trEl.appendChild(tdEl1);
   }
   var endTotal = 0;
-  for(var i = 0; i < myStores.length; i++){
-    endTotal += myStores[i].totalCookieSales;
+  for(var j = 0; j < myStores.length; j++){
+    endTotal += myStores[j].totalCookieSales;
   }
   tdEl = document.createElement('td');
   tdEl.textContent = endTotal;
   trEl.appendChild(tdEl);
   table.appendChild(trEl);
-}
+  // event.preventDefault();
+
+};
 
 
 
@@ -127,8 +130,8 @@ function footerRows () {
 
 var formData = document.getElementById('userinput');
 
-formData.addEventListener('submit', inputNewUserData);
 footerRows();
+formData.addEventListener('submit', inputNewUserData);
 function inputNewUserData (event) {
   event.preventDefault();
 
@@ -147,5 +150,6 @@ function inputNewUserData (event) {
   for (var i = 0; i < myStores.length; i++) {
     myStores[i].render();
   }
+  footerRows();
 };//***************end of inputNewUserData ******************
 //*******************Validations********************************
