@@ -1,109 +1,18 @@
-/*html body{
-  padding-top: 30px;
-  padding-bottom: 30px;
-  max-height:100%;
-  max-width:100%;
-  background-color: black;
-  color: white;
-  background-color: rgba(39, 157, 176, 0.52);
-color: white;
-word-spacing: 3px;
-}
 
-
-main{
-  max-width: 960px;
-  padding-left: 190px;
-  padding-top: 30px;
-
-}
-nav{
- padding-left: 150px;
- background-color: lightgrey;
- color: cornflowerblue;
- font-family: 'Indie Flower', cursive;
- text-decoration: none;
-}
-.pic1{
- padding-left: 0;
-}
-nav ul{
-width: 100%;
-top: 0;
-display: inline;
-}
-nav li{
- display: inline;
- padding: 30px;
- max-width: 960px;
- text-align: center;
-}
-.pic2{
-  padding-left: 0px;
-}
-main ul{
-  position: absolute;
-  padding-top: 30px;
-  width: 100%;
-}
-main ul li{
-  display: inline;
-  padding-left: 160px;
-  max-width: 960px;
-}
-.fitdamnit li:last-child{
-  clear: both;
-}
- section{
-  padding-top: 435px;
-  max-width: 960px;
-}
-section img {
-  float: left;
-  width: 50%;
-}
-article{
-  width: 50%;
-  float: right;
-  padding-bottom:30px;
-}
-article h2{
-  font-size: 36px;
-  padding-left: 30px;
-}
-article p{
-  height: 260px;
-  width: 95%;
-  overflow: auto;
-  font-size: 18px;
-  font-style: italic;
-  line-height: 24px;
-  padding-left: 30px;
-}
-.homeButton{
-  align-items: center;
-}
- .footer{
-  position: relative;
-  clear: both;
-  margin-top: 30px;
-  height: 70px;
-  width: 100%;
-  background-color: grey;
-}*/
 html body{
   padding-top: 30px;
   padding-bottom: 30px;
   max-height:100%;
   max-width:100%;
-  background-color: black;
-  color: white;
+  background-image: url("wood_texture_stock_by_bernardm1-d5f2f9e.jpg");
+  color: oldlace;
+
 }
 header{
   position: relative;
   width: 100%;
-  background-color: #CD2D14;
-  color: lightgrey;
+  text-decoration: none;
+  font-family: 'Indie Flower', cursive;
 }
 nav{
   padding-left: 150px;
@@ -126,16 +35,19 @@ nav li{
     max-width: 960px;
     padding: 30px 30px;
     padding-top: 30px;
-    background-color: oldlace;
-    color:black;
+    background-color: lightgrey;
+    color:navy;
     margin-left: 185px;
-    border-style: outset;
+    border-radius:55px;
     margin-top: 10px;
+    font-family:'Indie Flower', cursive;
+    border: 1px solid oldlace;
   }
   .pic2{
     padding-left: 0px;
   }
   main ul{
+
     position: absolute;
     padding-top: 30px;
     width: 100%;
@@ -194,6 +106,7 @@ nav li{
       width: 100%;
       background-color: grey;
     }
-#map{
+#map, #shirt{
 margin-right: 10px;
+border-radius: 55px;
 }

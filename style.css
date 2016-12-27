@@ -8,12 +8,19 @@ body {
   opacity: 0.7;
 }
 
-header {
-  word-spacing: -1px;
-  text-shadow: 5px 5px 0 rgba(22,120,23,1);
-  font-size: 30px;
-  color: orangered;
-}
+
+header{
+    word-spacing: -1px;
+    text-shadow: 5px 5px 0 rgba(22,120,23,1);
+    font-size: 30px;
+    color: salmon;
+    font-style: bold;
+  }
+.banner{
+  margin-top: 10px;
+  padding-bottom: 110px;
+  outline-color: salmon;
+
 
 th {
   border: 1px solid #092F19;
@@ -40,6 +47,18 @@ h1 {
   font-family: 'Indie Flower', cursive;
   text-decoration: none;
 }
+
+body {
+    background-image: url("wood_texture_stock_by_bernardm1-d5f2f9e.jpg");
+    text-decoration: none;
+    background-size: cover;
+    padding-bottom: 10px;
+    background-repeat: no-repeat;
+    background-position:center;
+    border-bottom: 20 px;
+    text-decoration: none;
+
+  }
 
 table {
     font-family: 'Indie Flower', cursive;
@@ -71,22 +90,17 @@ ul li {
   border: 1px orange solid;
 }
 
-ul li a:hover {
-  background-color: orange;
+
+ul li a{
+text-decoration: none;
+color:salmon;
+display: block;
 }
+ul li{  float: left; width: 200px; height: 25px; background-color: #4B5135; font-family:'Indie Flower', cursive; font-size: 15px; line-height: 50px;  text-align: center; opacity: 0.65; padding-bottom: 25px; padding-right: 0px; border: 1px oldlace solid; }
 
-/*
-  classes and id
-*/
+ul li a:hover{ background-color: salmon;}
+#salmonPic{
+opacity: 1.0;
 
-#userinput {
-  font-family: 'Indie Flower', cursive;
-  position: center bottom;
-  padding-bottom: 10px;
-  text-decoration: none;
-}
 
-.banner {
-  margin-top: 10px;
-  padding-bottom: 110px;
 }

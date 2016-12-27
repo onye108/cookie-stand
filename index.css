@@ -3,9 +3,9 @@ h1{
 
     font-family: 'Indie Flower', cursive;
     word-spacing: -1px;
-    text-shadow: 5px 5px 0 oldlace;
+    text-shadow: 5px 5px 0 salmon;
     font-size: 99px;
-    color: cornflowerblue;
+    color: oldlace;
     display: inline;
     text-align: center;
     padding-left: 45px;
@@ -16,21 +16,23 @@ html body{
  padding-bottom: 30px;
  max-height:100%;
  max-width:100%;
- background-color: khaki;
+ background-image: url("wood_texture_stock_by_bernardm1-d5f2f9e.jpg");
  color: white;
 }
 header{
  position: relative;
  width: 100%;
- background-color: ;
- color: lightgrey;
+ background-color: sliver ;
+ color: oldlace;
+ text-decoration: none;
 }
 nav{
  padding-left: 150px;
- background-color: lightgrey;
- color: cornflowerblue;
+ background-color: chrome;
+ color: salmon;
  font-family: 'Indie Flower', cursive;
  text-decoration: none;
+
 }
 
 .pic1{
@@ -38,8 +40,9 @@ nav{
 }
 nav ul{
 width: 100%;
-top: 0;
+top: 0px;
 display: inline;
+text-decoration: none;
 }
 nav li{
 
@@ -47,6 +50,7 @@ nav li{
  padding: 30px;
  max-width: 960px;
  text-align: center;
+ text-decoration: none;
 }
  main{
    max-width: 960px;
@@ -114,5 +118,5 @@ nav li{
      margin-top: 30px;
      height: 70px;
      width: 100%;
-     background-color: grey;
+     /*background-color: grey;*/
    }
